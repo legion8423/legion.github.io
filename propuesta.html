@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Proposal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffcccc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .background-image {
+            background-image: url(https://www.nawpic.com/media/2020/hello-kitty-pink-nawpic.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        header {
+            background-color: #e6687b;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        h1 {
+            color: #e6687b;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .button {
+            background-color: #e6687b;
+            border: none;
+            color: white;
+            padding: 0.5rem 2rem;
+            text-decoration: none;
+            margin: 1rem 0;
+            display: inline-block;
+        }
+
+        .reject {
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: top 0.5s, left 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>
+        <h1>A Special Message For You</h1>
+    </header>
+    <main>
+        <img src="https://i.pinimg.com/564x/64/75/f6/6475f6ae87264a3d926d87d7437e9cac.jpg">
+        <h1>¿Aceptarías ser mi San Valentín?</h1>
+        <p>Que tal amorcito, aqui estoy nuevamente ante ti con una interesante oferta, ¿serías mi gatita amasadora este san valentín?</p>
+        <a href="#" class="button accept">Chi y tambien a darte mi yogurt</a>
+        <a href="#" class="button reject">Ño</a>
+    </main>
+    <script>
+        document.querySelector('.reject').addEventListener('click', function() {
+            this.style.top = Math.random() * window.innerHeight + 'px';
+            this.style.left = Math.random() * window.innerWidth + 'px';
+        });
+    </script>
